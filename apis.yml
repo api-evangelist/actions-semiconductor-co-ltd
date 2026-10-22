@@ -1,25 +1,65 @@
 aid: actions-semiconductor-co-ltd
+
 name: Actions Semiconductor Co., Ltd.
-description: 'Actions Semiconductor Co., Ltd. is a company surfaced via the API Evangelist harvest backlog
-  (source: vc-portfolio; backed by nea) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Actions Semiconductor Co., Ltd. designs low-power edge AI chips and related semiconductor solutions. The company focuses on AI audio, wearable, and office device applications, offering SoC and processor series, development kits, and integration services. It serves global OEMs and developers seeking energy-efficient AI processing at the device level.'
+
 url: https://raw.githubusercontent.com/api-evangelist/actions-semiconductor-co-ltd/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Semiconductor
+- AI
+- Edge Computing
+- Low Power
+- IoT
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- nea
+
 common:
+- type: Hosts
+  url: hosts/actions-semiconductor-co-ltd-hosts.yml
+- type: DomainSecurity
+  url: security/actions-semiconductor-co-ltd-domain-security.yml
 - type: Website
   url: https://www.actions-semi.com/
+
+apis: []
+
+x-backed-by:
+- nea
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-22'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.actions-semi.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
